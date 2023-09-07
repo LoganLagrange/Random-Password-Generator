@@ -12,7 +12,7 @@ N/A
 
 ## Usage
 
-The page can be accessed via this link: 
+The page can be accessed via this link: https://loganlagrange.github.io/Random-Password-Generator/
 
 ![screenshot of the page](./assets/img/README-screenshot.png)
 

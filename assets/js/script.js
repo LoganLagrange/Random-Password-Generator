@@ -5,7 +5,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   // Object to store the password parameters
   var parameters = {
-    length: 8,
+    length: 0,
     lower: false,
     upper: false,
     numeric: false,
