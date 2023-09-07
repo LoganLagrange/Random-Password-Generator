@@ -21,7 +21,7 @@ The page is used by clicking the generate password button at which point the use
 ## Credits
 N/A
 
-Note: I did not include any code written by another person but i did do my own research and referenced w3schools and stack overflow for the Number.isNaN method and the .charAt method in order to learn how to use them correctly to determine how to test against imporper input and how to add a character into a string at a certain index location
+Note: I did not include any code written by another person but i did do my own research and referenced w3schools and stack overflow for the Number.isNaN method and the .charAt method in order to learn how to use them correctly to determine how to test against improper input and how to add a character into a string at a certain index location
 
 ## License
 See LICENSE in repo.
