@@ -3,6 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+  // Object to store the password parameters
   var parameters = {
     length: 8,
     lower: false,
@@ -11,10 +12,27 @@ function writePassword() {
     specChar: false
   }
 
-  // Prompt for length of password, stores in object
-  parameters.length = Number(window.prompt("How many characters would you like your password to be? min:8 max:128"));
-  console.log(parameters.length);
+  // Prompt for length of password, if input values pass checks will store in object
+  var lengthPrompt = Number(window.prompt("How many characters would you like your password to be? min:8 max:128"));
+  console.log(lengthPrompt);
 
+  // If statement to check for number input, if not a number alert is displayed and function is ended
+  if (Number.isNaN(lengthPrompt)){
+    window.alert("Password length must be a number");
+    return;
+  } else {
+    // If statement to check for correct password length, will end function if not correct
+    if(lengthPrompt < 8){
+      window.alert("Password must be at least 8 characters");
+      return;
+    } else if(lengthPrompt > 128){
+      window.alert("Password must be less than 128 characters");
+      return;
+    } else {
+      parameters.length = lengthPrompt;
+    }
+  }
+  
   // Prompt for lower case  characters
   parameters.lower = window.confirm("Would you like to include lower case characters?");
   console.log(parameters.lower);
@@ -34,6 +52,8 @@ function writePassword() {
   function generatePassword() {
     var pWord = " ";
     var characters = " ";
+    // If statement chooses character set based on parameters chosen by the user, console logs for testing purposes
+    // If no criteria are selected alert is diaplyed that at least one must be selected.
     if (parameters.specChar && parameters.numeric && parameters.lower && parameters.upper){
       characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!#$%&()*+,-./:;<>=?@{}[]|\^~";
       for ( var  i = 0; i < parameters.length; i++){
